@@ -6,11 +6,13 @@ if [ -z "$1" ]; then
     HEIGHT=$(cat ~/vidformat.param | xargs | cut -f2 -d" ")
     FRAMERATE=$(cat ~/vidformat.param | xargs | cut -f3 -d" ")
     DEVICE=$(cat ~/vidformat.param | xargs | cut -f4 -d" ")
+    GSTPARAM="gstreamer2.param"
 else
     WIDTH=$1
     HEIGHT=$2
     FRAMERATE=$3
     DEVICE=$4
+    GSTPARAM=$5
 fi
 
 echo "start video with width $WIDTH height $HEIGHT framerate $FRAMERATE device $DEVICE"
@@ -39,7 +41,7 @@ if [ $? != 0 ]; then
 fi
 
 # load gstreamer options
-gstOptions=$(tr '\n' ' ' < $HOME/gstreamer2.param)
+gstOptions=$(tr '\n' ' ' < $HOME/$GSTPARAM)
 
 # make sure framesize and framerate are supported
 
