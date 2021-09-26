@@ -19,7 +19,7 @@ while True:
     params = "$(cat /home/pi/{0}) {1}".format(sys.argv[1], sys.argv[2])
   else:
     params = " ".join(sys.argv[1:]))
-  os.system(home + "/companion/scripts/start_video.sh " + params
+  os.system(home + "/companion/scripts/start_video.sh " + params)
   sleep(2)
 
 
