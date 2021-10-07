@@ -184,3 +184,7 @@ Initial release
 
 0.0.29:
  - Switch to Raspbian Jessie legacy mirrors
+
+0.1.1:
+ - enable installing on RPi3B+/RPi4
+ - remove 'git' and 'terminal over browser' web-interface pages :-(
