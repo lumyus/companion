@@ -2,8 +2,8 @@
 
 export COMPANION_DIR=$HOME/companion
 
-GIT_USER=jaxxzer
-GIT_BRANCH=setup-clean
+GIT_USER=ES-Alexander
+GIT_BRANCH=setup-clean2
 BASE_URL=https://raw.githubusercontent.com/$GIT_USER/companion/$GIT_BRANCH/scripts
 
 mkdir tmp || { echo "failed to make temporary directory" >&2 && exit 1; }

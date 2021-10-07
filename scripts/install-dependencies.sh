@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-GIT_REPO=jaxxzer/companion
-GIT_BRANCH=setup-clean
-GIT_TAG=0.1.0
+GIT_REPO=ES-Alexander/companion
+GIT_BRANCH=setup-clean2
+GIT_TAG=0.1.1
 
 . ./bash-helpers.sh
 
@@ -33,7 +33,6 @@ run_step sudo apt install $APT_OPTIONS \
   gstreamer1.0-plugins-bad \
   gstreamer1.0-plugins-ugly \
   isc-dhcp-server \
-  python3-pip \
   libv4l-dev \
   v4l-utils \
   libkrb5-dev \
@@ -50,10 +49,12 @@ run_step sudo pip install \
   future \
   pynmea2 \
   grequests \
-  bluerobotics-ping \
+  bluerobotics-ping==0.0.10 \
   || error "failed pip install dependencies"
 
-run_step sudo pip3 install future || error "failed pip3 install dependencies"
+run_step sudo pip3 install \
+  future \
+  || error "failed pip3 install dependencies"
 
 # todo adjust so this can be run when the directory already exists
 # clone bluerobotics companion repository
