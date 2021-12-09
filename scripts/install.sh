@@ -2,7 +2,7 @@
 
 export COMPANION_DIR=$HOME/companion
 
-GIT_USER=ES-Alexander
+GIT_USER=lumyus
 GIT_BRANCH=setup-clean2
 BASE_URL=https://raw.githubusercontent.com/$GIT_USER/companion/$GIT_BRANCH/scripts
 
