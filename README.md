@@ -23,7 +23,7 @@ To make this installation work **the [terminal over browser](https://www.ardusub
 9. Reboot when prompted, and [set up a wifi connection](https://www.raspberrypi.org/documentation/computers/configuration.html#wireless-networking-command-line)
 10. Download and run the installation script (takes quite a while, possibly 30-90 minutes)
     ```
-    wget https://raw.githubusercontent.com/ES-Alexander/companion/setup-clean2/scripts/install.sh
+    wget https://raw.githubusercontent.com/lumyus/companion/setup-clean2/scripts/install.sh
     chmod +x install.sh
     ./install.sh
     ```
