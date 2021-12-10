@@ -67,14 +67,18 @@ run_step git fetch --tags
 run_step git reset --hard $GIT_TAG
 run_step git clean -fd
 
-run_step git submodule update --init --recursive
-run_step cd $COMPANION_DIR/submodules/mavlink
+#run_step git submodule update --init --recursive
+#run_step cd $COMPANION_DIR/submodules/mavlink
 run_step pip3 install --user wheel
 run_step pip3 install --user pymavlink
 
-run_step cd $COMPANION_DIR/submodules/MAVProxy
-run_step python3 setup.py build
-run_step sudo python3 setup.py install
+#run_step cd $COMPANION_DIR/submodules/MAVProxy
+#run_step python3 setup.py build
+#run_step sudo python3 setup.py install
+
+sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml python3-pygame
+pip3 install PyYAML mavproxy --user
+echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
 
 run_step cd $COMPANION_DIR/br-webui
 run_step npm install "https://github.com/sebakerckhof/node-v4l2camera.git#fix/node12" --save
